@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="./style.css">
+  <title>Posicionamento CSS</title>
+</head>
+<body>
+  <div class="d-flex flex-column container">
+    <div class="h1 d-flex title position-fixed">Posicionamento CSS</div>
+    <div class="d-flex flex-column container main-container">
+      <div class="d-flex flex-column container-sm static">
+        
+        <div class="jumbotron d-flex flex-column container-sm">
+          <h1 class="display-4 sub-title">position: static;</h1>
+          <p class="lead">"Static" é o tipo de posicionamento padrão do html.
+            Os elementos são posicionados um seguido do outro, sem sofrer as
+            propriedades "left", "right", "top", "bottom", ou "z-index".
+          </p>
+          <div class="d-flex container-sm box-container">
+            <div class="d-flex box box-static">Box 1</div>
+            <div class="d-flex box box-static">Box 2</div>
+            <div class="d-flex box box-static">Box 3</div>
+          </div>
+        </div>
+
+        <div class="jumbotron d-flex flex-column container-sm">
+          <h1 class="display-4 sub-title">position: relative;</h1>
+          <p class="lead">Elementos relativos são elementos que se posicionam 
+            relativamente ao seu posicionamento original. Esses elementos continuam
+            a ocupar o seu espaço original no fluxo da página, apenas se movem visualmente.
+            Podem sofrer as propriedades "left", "right", "top", "bottom", ou "z-index".
+          <br><br>
+            Nesse exemplo o elemento Box 3 está com a propriedade "left: 100px", ou seja,
+            está posicionado 100px a esquerda da sua posição original.
+          </p>
+          <div class="d-flex container-sm box-container">
+            <div class="d-flex box box-relative">Box 1</div>
+            <div class="d-flex box box-relative">Box 2</div>
+            <div class="d-flex box box-relative relative">Box 3</div>
+          </div>
+        </div>
+
+        <div class="jumbotron d-flex flex-column container-sm">
+          <h1 class="display-4 sub-title">position: absolute;</h1>
+          <p class="lead">Elementos absolutos possuem posição relativa ao
+            "elemento pai" mais próximo que tenha a propriedade position que não
+            seja "static". Diferentemente do caso anterior, elementos absolutos 
+            saem completamente do fluxo da página, como se ficassem em uma camada
+            acima do resto do site. Podem sofrer as propriedades "left", "right", "top",
+            "bottom", ou "z-index".
+          <br><br>
+            Nesse exemplo, a caixa branca possui a propriedade "position: relative"
+            e é o elemento pai mais próximo do Box 3. O Box 3 está com as propriedades
+            "top: 50px" e "left: 200px", posicionando-se a 50px abaixo e 200px a esquerda
+            da caixa branca.
+          </p>
+          <div class="d-flex container-sm box-container position-relative absolute-container">
+            <div class="d-flex box box-absolute">Box 1</div>
+            <div class="d-flex box box-absolute">Box 2</div>
+            <div class="d-flex box absolute">Box 3</div>
+          </div>
+        </div>
+
+        <div class="jumbotron d-flex flex-column container-sm">
+          <h1 class="display-4 sub-title">position: fixed;</h1>
+          <p class="lead">Elementos fixados, como o nome já diz, ficam fixados em
+            uma determinada posição em relação a tela. Assim como no caso anterior,
+            esses elementos saem do fluxo da página. Podem sofrer as propriedades
+            "left", "right", "top", "bottom", ou "z-index".
+          <br><br>
+            O exemplo desse caso é a barra roxa que está no topo da página. Como ela
+            está com a propriedade "top: 0px", ela fica fixa a zero pixels abaixo da tela.
+          </p>
+        </div>
+
+        <div class="jumbotron d-flex flex-column container-sm">
+          <h1 class="display-4 sub-title">position: sticky;</h1>
+          <p class="lead">Elementos com esta propriedade possuem posição "relative"
+            até que a posição da página alcance esses elementos, alterando a posição 
+            para "fixed". É necessário especificar pelo menos uma das propriedades
+            "left", "right", "top", "bottom" para que funcione.
+          <br><br>
+            Nesse exemplo, o Box 3 está com a propriedade "top: 100px", ou seja, 
+            ele vai se transformar em "fixed" assim que ele ficar a 100px de distância
+            do topo da página.
+          </p>
+          <div class="d-flex container-sm box-container position-relative sticky-container">
+            <div class="d-flex box box-sticky">Box 1</div>
+            <div class="d-flex box box-sticky">Box 2</div>
+            <div class="d-flex box sticky">Box 3</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <div class="d-flex flex-column container-sm agradecimentos final">
+      <div class="h4 pb-5">Obrigado por ter lido até aqui!</div>
+      <div class="h6 pt-2 pb-2">Acredito que a melhor forma de aprender é explicando.
+        Espero que esta página tenha sido útil para você assim como foi para mim :)
+      </div>
+      <div class="h6 pt-5 pb-5">Feito com ❤ por Enio</div>
+    </div>
+  </div>  
+</body>
+</html>
